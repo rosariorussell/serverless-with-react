@@ -1,24 +1,28 @@
 # Part I - The Basics
 ### WHAT IS SERVERLESS/AWS LAMBDA AND WHY USE IT?
-
 ```
-* Stateless functions run in a container managed by AWS
-* Low maintenance, low cost, easy to scale
+Stateless functions run in a container managed by AWS
+Low maintenance, low cost, easy to scale
 ```
 
 ### SET UP YOUR AWS ACCOUNT
   * Create an AWS account (Free tier)
   * Create an IAM user and configure the AWS CLI
-    ```
     * Grant admin rights and programmatic access
-    * aws configure
+    ```
+    aws configure
     ```
 ### SETTING UP THE SERVERLESS BACKEND
   * Create a DynamoDB table
+    * Use composite key (partition key + sort key) to filter table by multiple columns
   * Create an S3 bucket for file uploads
+    * Enable CORS
   * Create a Cognito user pool
+    * Create app client
+    * Update domain name
     * Create a Cognito test user
-  * Set up the Serverless Framework
+  * Set up the Serverless Framework for API Gateway
+    * Clone a serverless starter boilerplate
     * Add support for ES6/ES7 JavaScript
 ### BUILDING A SERVERLESS REST API
   * Add a create note API
