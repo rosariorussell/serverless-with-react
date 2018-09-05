@@ -23,13 +23,18 @@ Low maintenance, low cost, easy to scale
     * Create a Cognito test user
   * Set up the Serverless Framework for API Gateway
     * Clone a serverless starter boilerplate
-    * Add support for ES6/ES7 JavaScript
-### BUILDING A SERVERLESS REST API
-  * Add a create note API
-  * Add a get note API
-  * Add a list all the notes API
-  * Add an update note API
-  * Add a delete note API
+    * Add support for ES6/ES7 JavaScript with Babel and Webpack
+### BUILDING A SERVERLESS REST (CRUD) API
+  * Create helper dynamoDB functions
+  * Create CRUD functions
+    * Add a create note API
+    * Add a get (read) note API
+    * Add a get (read) all notes API
+    * Add an update note API
+    * Add a delete note API
+  * Create mock JSON files
+  * Update serverless.yml with CRUD functions and test with mock data
+  * Test serverless local functions using mock JSON files
 ### DEPLOYING THE BACKEND
   * Deploy the APIs
   * Create a Cognito identity pool
