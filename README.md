@@ -57,7 +57,9 @@ Low maintenance, low cost, easy to scale
     ```
 ### SETTING UP A REACT APP
   * Create a new React.js app
-    * Add app favicons
+    * Use favicon generator from a 260x260 png logo
+     * Add files to root folder
+     * Update HTML and manifest with favicon data
     * Set up custom fonts
     * Set up Bootstrap
   * Handle routes with React Router
