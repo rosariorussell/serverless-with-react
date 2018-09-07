@@ -20,9 +20,8 @@ Low maintenance, low cost, easy to scale
   * Create a Cognito user pool
     * Create app client
     * Update domain name
-    * Create a Cognito test user
-  * Set up the Serverless Framework for API Gateway
-    * Clone a serverless starter boilerplate
+    * Create a Cognito test user and confirm user
+  * Set up the Serverless Framework for API Gateway by cloning a serverless starter boilerplate
     * Add support for ES6/ES7 JavaScript with Babel and Webpack
 ### BUILDING A SERVERLESS REST (CRUD) API
   * Create helper dynamoDB functions
@@ -57,16 +56,18 @@ Low maintenance, low cost, easy to scale
     ```
 ### SETTING UP A REACT APP
   * Create a new React.js app
-    * Use favicon generator from a 260x260 png logo
-     * Add files to root folder
-     * Update HTML and manifest with favicon data
-    * Set up custom fonts
-    * Set up Bootstrap
-  * Handle routes with React Router
-    * Create containers
-    * Adding links in the navbar
-    * Handle 404s
-  * Configure AWS Amplify
+  * Use favicon generator from a 260x260 png logo (https://realfavicongenerator.net/)
+    * Add files to root folder and update index and manifest files with favicon data
+  * Add Google font and update index and css files
+  * Set up Bootstrap and React Bootstrap
+  * Create a navbar with all the links
+    * Use single page application links that do not refresh page with react-router-dom and react-router-bootstrap
+  * Export a Routes.js component below the navbar which contains React Router
+  * Make a containers folder for the various pages/components
+    * Create a Home.js component with Home.css styling
+    * Handle 404s with a NotFound.js container and add as a last option in the Routes file
+  * Configure AWS Amplify to allow our React app to talk to the AWS backend
+    * Create a config file with all the AWS resources used
 ### BUILDING A REACT APP
   * Create a login page
     * Login with AWS Cognito
@@ -175,3 +176,6 @@ Low maintenance, low cost, easy to scale
 ### FRONTEND
   * Code Splitting in Create React App
   * Environments in Create React App
+
+### Questions
+* How to handle non-auth pages?
