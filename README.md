@@ -38,8 +38,23 @@ Low maintenance, low cost, easy to scale
 ### DEPLOYING THE BACKEND
   * Deploy the APIs
   * Create a Cognito identity pool
-    * Cognito user pool vs identity pool
+    * Update authentication provider to be the user pool previously created
+    * Grant permission to an s3 folder containing the user id as well as API gateway
   * Test the APIs
+    ```
+    npx aws-api-gateway-cli-test \
+    --username='rosariorussell@gmail.com' \
+    --password='password' \
+    --user-pool-id='us-east-1_PVrNeuy6m' \
+    --app-client-id='24vg1in1srudm9t8elb26jf3d1' \
+    --cognito-region='us-east-1' \
+    --identity-pool-id='us-east-1:354a0d0c-1e4b-404c-94da-b5e0e49b1b94' \
+    --invoke-url='https://q2aqn6s3nl.execute-api.us-east-1.amazonaws.com/prod/' \
+    --api-gateway-region='us-east-1' \
+    --path-template='notes' \
+    --method='POST' \
+    --body='{"content":"hello world","attachment":"hello.jpg"}'
+    ```
 ### SETTING UP A REACT APP
   * Create a new React.js app
     * Add app favicons
