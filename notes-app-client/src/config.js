@@ -1,4 +1,6 @@
 export default {
+  MAX_ATTACHMENT_SIZE: 5000000,
+
   s3: {
     REGION: "us-east-1",
     BUCKET: "serverless-with-react"
@@ -14,3 +16,4 @@ export default {
     IDENTITY_POOL_ID: "us-east-1:354a0d0c-1e4b-404c-94da-b5e0e49b1b94"
   }
 };
+
