@@ -24,16 +24,17 @@ Low maintenance, low cost, easy to scale
   * Set up the Serverless Framework for API Gateway by cloning a serverless starter boilerplate
     * Add support for ES6/ES7 JavaScript with Babel and Webpack
 ### BUILDING A SERVERLESS REST (CRUD) API
-  * Create helper dynamoDB functions
   * Create CRUD functions
+    * Create helper dynamoDB functions
     * Add a create note API
     * Add a get (read) note API
     * Add a get (read) all notes API
     * Add an update note API
     * Add a delete note API
-  * Create mock JSON files
-  * Update serverless.yml with CRUD functions and test with mock data
-  * Test serverless local functions using mock JSON files
+  * Update serverless.yml with CRUD functions
+  * Test serverless.yml with mock data
+    * Create a mock folder with JSON files mimicking real data that would be sent over the API gateway
+    * Invoke serverless local functions using the mock JSON files
 ### DEPLOYING THE BACKEND
   * Deploy the APIs
   * Create a Cognito identity pool
@@ -66,16 +67,22 @@ Low maintenance, low cost, easy to scale
   * Make a containers folder for the various pages/components
     * Create a Home.js component with Home.css styling
     * Handle 404s with a NotFound.js container and add as a last option in the Routes file
-  * Configure AWS Amplify to allow our React app to talk to the AWS backend
+  * Add AWS Amplify to the main index.js file to allow our React app to talk to the AWS backend
     * Create a config file with all the AWS resources used
 ### BUILDING A REACT APP
-  * Create a login page
-    * Login with AWS Cognito
-    * Add the session to the state
-    * Load the state from the session
-    * Clear the session on logout
-    * Redirect on login and logout
-    * Give feedback while logging in
+  * Create a login page and login with AWS Cognito
+  * Add the session to the state on the App.js
+    * Pass the session authentication state as props to the routes
+    * Use a ternary operator and React fragment for the navbar components
+  * Load the state from the session
+    * Check if authenticated within the componentDidMount lifecycle
+    * Add isAuthenticating boolean toggle to app state and render app after state is updated
+  * Clear the session on logout
+  * Redirect on login and logout
+    * withRouter, this.props.history.push("'")
+  * Give feedback while logging in
+    * Add isLoading boolean toggle to login container
+    * Create a loader button that displays information to the user while waiting to complete task
   * Create a signup page
     * Create the signup form
     * Signup with AWS Cognito
@@ -179,3 +186,4 @@ Low maintenance, low cost, easy to scale
 
 ### Questions
 * How to handle non-auth pages?
+* How to add redux?
